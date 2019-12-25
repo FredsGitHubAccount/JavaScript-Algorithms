@@ -7,27 +7,27 @@
 
 function maxChar(str) {
 
-let map = {}
+  let map = {}
 
-for(let letter of str){
+  for (let letter of str) {
 
 
     map[letter] = map[letter] + 1 || 1
-}
-
-let max = 0
-let recurring;
-
-  for(key in map){
-    
-    if(map[key] > max){
-        max = map[key]
-        recurring = key
-    }
-   
   }
 
-return [max,recurring]
+  let max = 0
+  let recurring;
+
+  for (key in map) {
+
+    if (map[key] > max) {
+      max = map[key]
+      recurring = key
+    }
+
+  }
+
+  return [max, recurring]
 
 }
 
@@ -78,7 +78,7 @@ module.exports = maxChar;
 //            match = key
 //       }
 //       max = Math.max(max,map[key])
-      
+
 //   }
 
 //   return [map,max,letter,match]
@@ -115,7 +115,7 @@ module.exports = maxChar;
 //           i++
 //           myObj[`nextMatch ${i}`] = key
 //       }
-      
+
 //   }
 
 
@@ -126,3 +126,28 @@ module.exports = maxChar;
 
 
 // console.log(sorter("my good old fffriend"))
+
+let arr = [-3, -63, -20, -22, -1,-6]
+
+const maxSum = arr => {
+
+  let current = arr[0]
+  let max = arr[0]
+
+  for (let i = 1; i < arr.length; i++) {
+
+    if (current > 0) {
+      current += arr[i]
+    }
+    else if (current < 0) {
+      current = arr[i]
+    }
+    max = Math.max(current, max)
+
+  }
+  return max > 0 ? max : 'Your value is in the negative at ' + max
+}
+
+
+
+console.log(maxSum(arr))
