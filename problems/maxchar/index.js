@@ -87,3 +87,42 @@ module.exports = maxChar;
 
 
 // console.log(sorter("my good old fffriend"))
+
+
+// Trying to retain the max char if duplicate maxes
+// const sorter = str => {
+
+//   let max = 0
+//   let map = {}
+//   let myObj = {}
+
+//   for(let char of str){
+//       map[char] = map[char] + 1 || 1
+//   }
+//   delete map[" "]
+
+//   let i = 0
+
+//   for(let key in map){
+
+
+//       if(map[key]>max){
+//           max = map[key]
+//           myObj.maxLetter = key
+//       }
+
+//       else if(map[key] === max){  
+//           i++
+//           myObj[`nextMatch ${i}`] = key
+//       }
+      
+//   }
+
+
+//   return myObj
+
+
+// }
+
+
+// console.log(sorter("my good old fffriend"))
