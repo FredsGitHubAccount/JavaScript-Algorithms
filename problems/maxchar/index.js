@@ -127,27 +127,27 @@ module.exports = maxChar;
 
 // console.log(sorter("my good old fffriend"))
 
-let arr = [-3, -63, -20, -22, -1,-6]
+// let arr = [-3, -63, -20, -22, -1,-6]
 
-const maxSum = arr => {
+// const maxSum = arr => {
 
-  let current = arr[0]
-  let max = arr[0]
+//   let current = arr[0]
+//   let max = arr[0]
 
-  for (let i = 1; i < arr.length; i++) {
+//   for (let i = 1; i < arr.length; i++) {
 
-    if (current > 0) {
-      current += arr[i]
-    }
-    else if (current < 0) {
-      current = arr[i]
-    }
-    max = Math.max(current, max)
+//     if (current > 0) {
+//       current += arr[i]
+//     }
+//     else if (current < 0) {
+//       current = arr[i]
+//     }
+//     max = Math.max(current, max)
 
-  }
-  return max > 0 ? max : 'Your value is in the negative at ' + max
-}
+//   }
+//   return max > 0 ? max : 'Your value is in the negative at ' + max
+// }
 
 
 
-console.log(maxSum(arr))
+// console.log(maxSum(arr))
