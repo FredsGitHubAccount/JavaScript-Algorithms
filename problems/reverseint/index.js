@@ -24,26 +24,30 @@
 
 let practice = arr => {
 
+for(let i = 1; i<arr.length; i++){
 
-    for (let i = 0; i < arr.length; i++) {
-        let min = arr[i]
-        console.log
+    let min = arr[i]
 
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[j] < min) {
-                min = arr[j]
-            }
-        }
-        [arr[i],arr[min]]=[arr[min],arr[i]]
+    for(j = i-1; arr[j]>min;j--){
+
+        arr[j+1] = arr[j]
     }
+    arr[j+1] = min
 
-    return arr
+}
 
+return arr
 }
 
 
 
+
 console.log(practice([5, 3, 1, 9, 1]))
+// 5 3 1 9 1
+// 3 5 1 9 1
+// 3 5 5 9 1
+// 3 3 5 9 1
+// 1 3 5 9 1
 
 
 
