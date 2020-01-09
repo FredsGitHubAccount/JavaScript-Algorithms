@@ -22,34 +22,45 @@
 
 
 
-let practice = arr => {
+let practice = str => {
 
-for(let i = 1; i<arr.length; i++){
+    str = str.toLowerCase()
 
-    let min = arr[i]
+    let mapped = {}
+    let maxLetter = ""
+    let maxNumber = 0
 
-    for(j = i-1; arr[j]>min;j--){
+    for(let char of str){
 
-        arr[j+1] = arr[j]
+        if(mapped[char]){
+            mapped[char]++
+        }
+        else {
+            mapped[char] = 1
+        }
     }
-    arr[j+1] = min
+    
+    for(let char in mapped){
+
+        if (mapped[char] > maxNumber){
+            maxNumber = mapped[char];
+            maxLetter = char
+        }
+
+    }
+
+
+    return [maxLetter,maxNumber]
+
+
+    
 
 }
 
-return arr
-}
 
 
 
-
-console.log(practice([5, 3, 1, 9, 1]))
-// 5 3 1 9 1
-// 3 5 1 9 1
-// 3 5 5 9 1
-// 3 3 5 9 1
-// 1 3 5 9 1
-
-
+console.log(practice("Most Common LetterLlL"))
 
 
 // module.exports = reverseInt;
