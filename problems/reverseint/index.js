@@ -64,3 +64,57 @@ console.log(practice("Most Common LetterLlL"))
 
 
 // module.exports = reverseInt;
+
+
+
+// let user = {
+//     name:"Joe",
+//     scores:[1,3,5,2]
+// }
+
+// let potentialMatches = [
+//     {
+//         name:"Bob",
+//         scores:[5,1,2,1]
+//     },
+
+//     {
+//         name:"Sally",
+//         scores:[1,3,5,2]
+//     },
+//     {
+//         name:"Austin",
+//         scores:[1,3,5,3]
+
+//     }
+// ]
+
+// let calculateMatch = userScores => {
+
+//     let currentMatch = 0
+//     let totalMatchDifference = 50
+
+//     for(let i = 0; i<potentialMatches.length;i++){
+
+//         let currentDifference = 0;
+
+//         for(let j = 0; j<potentialMatches[i].scores.length;j++){
+
+//             currentDifference += Math.abs(userScores[j]-potentialMatches[i].scores[j])
+         
+//         }
+
+//         if(currentDifference<totalMatchDifference){
+//             currentMatch = i;
+//             totalMatchDifference = currentDifference
+//         }
+//     }
+
+
+//     return potentialMatches[currentMatch].name
+
+
+// }
+
+
+// console.log(calculateMatch(user.scores))
